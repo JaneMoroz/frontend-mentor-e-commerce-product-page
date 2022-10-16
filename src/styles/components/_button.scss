@@ -16,6 +16,10 @@
       background: var(--orange);
       opacity: 0;
       transition: all 0.3s;
+
+      @media only screen and (max-width: 56.25em) {
+        display: none;
+      }
     }
 
     &:hover {
