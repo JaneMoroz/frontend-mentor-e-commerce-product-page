@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build:css": "node-sass src/styles -o src/assets/css ",
-    "watch:css": "npm run build:css && node-sass src/styles -o src/ -w -r",
+    "watch:css": "npm run build:css && node-sass src/styles -o src/assets/css -w -r",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
