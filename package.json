@@ -13,6 +13,8 @@
     "typescript": "^4.8.4"
   },
   "scripts": {
+    "build:css": "node-sass src/styles -o src/assets/css ",
+    "watch:css": "npm run build:css && node-sass src/styles -o src/ -w -r",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node-sass": "^4.11.3",
+    "node-sass": "^7.0.3",
+    "npm-run-all": "^4.1.5"
   }
 }
