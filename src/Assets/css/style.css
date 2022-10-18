@@ -85,9 +85,6 @@ button {
     object-fit: cover; }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   column-gap: 5.6rem;
   padding: 3.2rem 0;
   border-bottom: 4px solid var(--blue-grayish-light); }
@@ -96,8 +93,6 @@ button {
       padding: 2rem 0;
       border-bottom: none; } }
   .navbar__menu {
-    display: flex;
-    align-items: center;
     column-gap: 1.8rem; }
     .navbar__menu_btn {
       display: none; }
@@ -114,8 +109,6 @@ button {
       .navbar__links {
         display: none; } }
   .navbar__user {
-    display: flex;
-    align-items: center;
     column-gap: 5.6rem; }
     @media only screen and (max-width: 56.25em) {
       .navbar__user {
@@ -155,3 +148,13 @@ button {
   max-width: 114rem;
   margin: 0 auto;
   padding: 0 2.4rem; }
+
+.flex {
+  display: flex;
+  align-items: center; }
+
+.flex_direction_column {
+  flex-direction: column; }
+
+.flex_justify_space-between {
+  justify-content: space-between; }

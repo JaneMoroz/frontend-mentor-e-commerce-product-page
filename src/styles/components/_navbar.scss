@@ -1,7 +1,4 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   column-gap: 5.6rem;
   padding: 3.2rem 0;
   border-bottom: 4px solid var(--blue-grayish-light);
@@ -12,8 +9,6 @@
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
     column-gap: 1.8rem;
 
     &_btn {
@@ -39,8 +34,6 @@
   }
 
   &__user {
-    display: flex;
-    align-items: center;
     column-gap: 5.6rem;
 
     @media only screen and (max-width: 56.25em) {

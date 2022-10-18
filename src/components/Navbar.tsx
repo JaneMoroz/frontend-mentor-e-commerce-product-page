@@ -5,8 +5,8 @@ import logo from "../assets/logo.svg";
 const Navbar = () => {
   return (
     <div className="container">
-      <nav className="navbar">
-        <div className="navbar__menu">
+      <nav className="navbar flex flex_justify_space-between">
+        <div className="navbar__menu flex">
           <button
             type="button"
             className="navbar__menu_btn btn btn_type_icon-big"
@@ -49,7 +49,7 @@ const Navbar = () => {
             contact
           </a>
         </div>
-        <div className="navbar__user">
+        <div className="navbar__user flex">
           <button type="button" className="btn btn_type_icon-big">
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
               <path

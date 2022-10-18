@@ -3,3 +3,16 @@
   margin: 0 auto;
   padding: 0 2.4rem;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex_direction_column {
+  flex-direction: column;
+}
+
+.flex_justify_space-between {
+  justify-content: space-between;
+}
