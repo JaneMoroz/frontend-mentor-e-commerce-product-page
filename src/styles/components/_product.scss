@@ -1,0 +1,98 @@
+.product {
+  padding: 7.2rem 4.8rem !important;
+  &__gallery {
+    button {
+      padding: 2.4rem;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2.4rem;
+      }
+    }
+
+    &-thumbnail {
+      padding: 0 2.4rem;
+      column-gap: 1.6rem;
+      button {
+        padding: 1.4rem 0;
+      }
+    }
+  }
+  &__description {
+    align-self: center;
+    max-width: 45rem;
+    justify-self: end;
+
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      margin-bottom: 3.2rem;
+    }
+
+    p {
+      color: var(--blue-grayish-dark);
+      line-height: 1.65;
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__company-tag {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--orange);
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__price {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    p {
+      color: var(--black);
+      vertical-align: middle;
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p:nth-child(1) {
+      display: flex;
+      align-items: center;
+      column-gap: 1.6rem;
+    }
+
+    p:nth-child(2) {
+      font-size: 1.4rem;
+      color: var(--blue-grayish);
+      text-decoration: line-through;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__price-tag {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: var(--orange-pale);
+    color: var(--orange);
+  }
+
+  &__cta {
+    column-gap: 1.6rem;
+  }
+
+  &__quantity {
+    background: var(--blue-grayish-light);
+    padding: 1rem 0.8rem;
+    column-gap: 2.4rem;
+    border-radius: 1rem;
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
+}

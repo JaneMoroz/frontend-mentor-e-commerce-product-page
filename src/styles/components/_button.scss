@@ -49,4 +49,31 @@
       object-fit: cover;
     }
   }
+
+  &_type_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  &_type_primary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.4rem;
+    padding: 1.55rem;
+    background: var(--orange);
+    border-radius: 1rem;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    svg {
+      path {
+        fill: var(--white);
+      }
+    }
+  }
 }
