@@ -1,0 +1,16 @@
+.lightbox {
+  position: absolute;
+  //   display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--lightbox-background);
+  &__gallery {
+    z-index: 999;
+    max-width: 40rem;
+  }
+}

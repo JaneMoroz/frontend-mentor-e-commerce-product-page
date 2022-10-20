@@ -5,32 +5,9 @@
   @media only screen and (max-width: 56.25em) {
     max-width: 100%;
   }
-  &-btn {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    background: var(--white);
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
 
-    &_type_prev {
-      left: 0;
-      transform: translate(50%, -50%);
-    }
-
-    &_type_next {
-      left: 100%;
-      transform: translate(-150%, -50%);
-    }
-
-    @media only screen and (max-width: 56.25em) {
-      display: flex;
-    }
-  }
   &-image_size_bg {
+    position: relative;
     @media only screen and (max-width: 56.25em) {
       cursor: auto;
     }
