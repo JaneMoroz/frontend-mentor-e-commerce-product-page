@@ -1,7 +1,7 @@
 .lightbox {
   position: absolute;
-  //   display: flex;
-  display: none;
+  display: flex;
+  // display: none;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -12,5 +12,11 @@
   &__gallery {
     z-index: 999;
     max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    &-close {
+      align-self: flex-end;
+    }
   }
 }

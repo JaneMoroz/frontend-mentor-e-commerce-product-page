@@ -110,7 +110,7 @@ button {
 
 .lightbox {
   position: absolute;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -120,7 +120,12 @@ button {
   background: var(--lightbox-background); }
   .lightbox__gallery {
     z-index: 999;
-    max-width: 40rem; }
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem; }
+    .lightbox__gallery-close {
+      align-self: flex-end; }
 
 .navbar {
   column-gap: 5.6rem;
