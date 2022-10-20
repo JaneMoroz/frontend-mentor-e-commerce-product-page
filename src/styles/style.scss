@@ -7,7 +7,9 @@
 @import "components/cart";
 @import "components/lightbox";
 @import "components/navbar";
-@import "components/product";
+@import "components/product/product";
+@import "components/product/productDescription";
+@import "components/product/productGallery";
 
 @import "layout/layout";
 
