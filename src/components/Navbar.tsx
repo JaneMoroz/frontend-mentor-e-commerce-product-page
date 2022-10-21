@@ -1,6 +1,7 @@
 import React from "react";
 import userImage from "../assets/images/image-avatar.png";
 import logo from "../assets/logo.svg";
+import Cart from "./Cart";
 
 const Navbar = () => {
   return (
@@ -63,6 +64,7 @@ const Navbar = () => {
             <img src={userImage} alt="user" />
           </a>
         </div>
+        <Cart />
       </nav>
       <div className="overlay"></div>
     </div>
