@@ -9,6 +9,7 @@ import {
   img3Small,
   img4Small,
 } from "../assets/images";
+import { Previous, Next } from "../assets/icons/index";
 
 type GalleryProps = {
   lightbox: boolean;
@@ -24,15 +25,7 @@ const Gallery = ({ lightbox }: GalleryProps) => {
             lightbox === true ? "gallery__btn_type_lightbox" : ""
           }`}
         >
-          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M11 1 3 9l8 8"
-              stroke="#1D2026"
-              strokeWidth="3"
-              fill="none"
-              fillRule="evenodd"
-            />
-          </svg>
+          <Previous />
         </button>
         <button
           type="button"
@@ -40,15 +33,7 @@ const Gallery = ({ lightbox }: GalleryProps) => {
             lightbox === true ? "gallery__btn_type_lightbox" : ""
           }`}
         >
-          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m2 1 8 8-8 8"
-              stroke="#1D2026"
-              strokeWidth="3"
-              fill="none"
-              fillRule="evenodd"
-            />
-          </svg>
+          <Next />
         </button>
         <img src={img1} alt="main image" />
       </div>
