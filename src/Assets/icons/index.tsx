@@ -69,7 +69,7 @@ export const Minus = () => {
           id="a"
         />
       </defs>
-      <use fill="#FF7E1B" fill-rule="nonzero" xlinkHref="#a" />
+      <use fill="#FF7E1B" fillRule="nonzero" xlinkHref="#a" />
     </svg>
   );
 };
@@ -80,7 +80,7 @@ export const Next = () => {
       <path
         d="m2 1 8 8-8 8"
         stroke="#1D2026"
-        stroke-width="3"
+        strokeWidth="3"
         fill="none"
         fillRule="evenodd"
       />
@@ -113,7 +113,7 @@ export const Previous = () => {
       <path
         d="M11 1 3 9l8 8"
         stroke="#1D2026"
-        stroke-width="3"
+        strokeWidth="3"
         fill="none"
         fillRule="evenodd"
       />

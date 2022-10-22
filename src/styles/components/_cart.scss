@@ -1,4 +1,5 @@
 .cart {
+  display: none;
   position: absolute;
   top: 85%;
   right: 0;
@@ -13,6 +14,19 @@
     left: 50%;
     min-width: 40rem;
     transform: translateX(-50%);
+  }
+
+  &__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30rem;
+    height: 15rem;
+
+    p {
+      color: var(--blue-grayish-dark);
+      font-weight: 700;
+    }
   }
 
   &__title {
@@ -47,6 +61,8 @@
     column-gap: 1.4rem;
 
     p {
+      display: flex;
+      justify-content: space-between;
       padding: 0.3rem 0;
       font-size: 1.4rem;
       text-transform: capitalize;
@@ -57,4 +73,8 @@
       }
     }
   }
+}
+
+.cart.visible {
+  display: block;
 }

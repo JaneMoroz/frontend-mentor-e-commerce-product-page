@@ -1,21 +1,13 @@
 import React from "react";
-import {
-  img1,
-  img2,
-  img3,
-  img4,
-  img1Small,
-  img2Small,
-  img3Small,
-  img4Small,
-} from "../assets/images";
 import { Previous, Next } from "../assets/icons/index";
+import { useStore } from "../context/context";
 
 type GalleryProps = {
   lightbox: boolean;
 };
 
 const Gallery = ({ lightbox }: GalleryProps) => {
+  const store = useStore();
   return (
     <>
       <div className="gallery__image_size_bg">
@@ -35,21 +27,17 @@ const Gallery = ({ lightbox }: GalleryProps) => {
         >
           <Next />
         </button>
-        <img src={img1} alt="main image" />
+        <img
+          src={store.single_product.images[0]}
+          alt={store.single_product.title}
+        />
       </div>
       <div className="gallery__thumbnail flex">
-        <button type="button" className="gallery__image_size_sm">
-          <img src={img1Small} alt="image 1" />
-        </button>
-        <button type="button" className="gallery__image_size_sm">
-          <img src={img2Small} alt="image 2" />
-        </button>
-        <button type="button" className="gallery__image_size_sm">
-          <img src={img3Small} alt="image 3" />
-        </button>
-        <button type="button" className="gallery__image_size_sm">
-          <img src={img4Small} alt="image 4" />
-        </button>
+        {store.single_product.images.map((image, index) => (
+          <button key={index} type="button" className="gallery__image_size_sm">
+            <img src={image} alt={store.single_product.title} />
+          </button>
+        ))}
       </div>
     </>
   );
