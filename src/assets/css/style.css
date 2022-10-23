@@ -48,6 +48,16 @@ button {
   background: transparent;
   border: none; }
 
+h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem; }
+
+p {
+  color: var(--blue-grayish-dark);
+  line-height: 1.65; }
+
 .btn_type_text {
   position: relative;
   color: var(--blue-grayish-dark);
@@ -76,8 +86,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 3.6rem;
+  width: 3.6rem;
   border-radius: 50%;
   transition: all 0.3s; }
   .btn_type_img:hover {
@@ -116,7 +126,7 @@ button {
   align-items: center;
   justify-content: center;
   column-gap: 1.4rem;
-  padding: 1.55rem;
+  padding: 1.65rem;
   background: var(--orange);
   border-radius: 1rem;
   color: var(--white);
@@ -393,26 +403,21 @@ button {
       max-width: 100%;
       padding: 1.6rem 3.2rem; } }
   .product__description h1 {
-    font-size: 3.6rem;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 0.1rem;
     margin-bottom: 3.2rem; }
   .product__description p {
-    color: var(--blue-grayish-dark);
-    line-height: 1.65;
     margin-bottom: 2.4rem; }
 
 .product__company-tag {
   display: inline-block;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--orange);
-  letter-spacing: 0.2rem;
-  margin-bottom: 1.6rem; }
+  letter-spacing: 0.3rem;
+  margin-bottom: 1.8rem; }
 
 .product__price {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700; }
   @media only screen and (max-width: 37.5em) {
     .product__price {
@@ -432,18 +437,17 @@ button {
     align-items: center;
     column-gap: 1.6rem; }
   .product__price p:nth-child(2) {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--blue-grayish);
     text-decoration: line-through;
     margin-bottom: 3.2rem; }
     @media only screen and (max-width: 37.5em) {
       .product__price p:nth-child(2) {
-        font-size: 1.6rem;
         margin-bottom: 1.8rem; } }
 
 .product__price-tag {
-  font-size: 1.4rem;
-  padding: 0.3rem 0.5rem;
+  font-size: 1.6rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 5px;
   background: var(--orange-pale);
   color: var(--orange); }
@@ -457,7 +461,7 @@ button {
 
 .product__quantity {
   background: var(--blue-grayish-light);
-  padding: 1rem 0.8rem;
+  padding: 1.2rem 0.8rem;
   column-gap: 2.4rem;
   border-radius: 1rem; }
   @media only screen and (max-width: 56.25em) {
