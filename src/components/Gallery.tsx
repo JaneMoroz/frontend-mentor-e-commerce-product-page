@@ -11,7 +11,7 @@ const Gallery = ({ lightbox }: GalleryProps) => {
   const store = useStore();
 
   const handleLightbox = () => {
-    if (!lightbox && !store.lightboxIsOpen) {
+    if (!store.lightboxIsOpen) {
       store.toggleLightbox();
     }
   };
@@ -49,17 +49,24 @@ const Gallery = ({ lightbox }: GalleryProps) => {
         >
           <Next />
         </button>
+        {/* Big screen */}
         <button
+          className="gallery__main-image_screen_bg"
           type="button"
           onClick={handleLightbox}
           aria-label="open lightbox"
         >
           <img
-            onClick={handleLightbox}
             src={store.single_product.images[imageIndex]}
             alt={store.single_product.title}
           />
         </button>
+        {/* Small screen */}
+        <img
+          className="gallery__main-image_screen_sm"
+          src={store.single_product.images[imageIndex]}
+          alt={store.single_product.title}
+        />
       </div>
       <div className="gallery__thumbnail flex">
         {store.single_product.images.map((image, index) => (

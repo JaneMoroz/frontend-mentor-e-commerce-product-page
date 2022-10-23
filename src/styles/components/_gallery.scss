@@ -22,6 +22,22 @@
     }
   }
 
+  &__main-image_screen {
+    &_bg {
+      display: block;
+      @media only screen and (max-width: 56.25em) {
+        display: none;
+      }
+    }
+
+    &_sm {
+      display: none;
+      @media only screen and (max-width: 56.25em) {
+        display: block;
+      }
+    }
+  }
+
   &__image_size_sm {
     display: flex;
     align-items: center;

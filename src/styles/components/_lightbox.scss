@@ -5,12 +5,12 @@
   align-items: center;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background: var(--lightbox-background);
+  z-index: 999;
 
   &__inner {
-    z-index: 999;
+    position: fixed;
     max-width: 40rem;
     display: flex;
     flex-direction: column;
