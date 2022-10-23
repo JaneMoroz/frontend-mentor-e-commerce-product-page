@@ -361,9 +361,9 @@ button {
     transition: all 0.3s; }
   .gallery__btn_type_lightbox {
     display: flex; }
-  .gallery__btn_type_lightbox.gallery-btn_type_prev {
+  .gallery__btn_type_lightbox.gallery__btn_type_prev {
     transform: translate(-50%, -50%); }
-  .gallery__btn_type_lightbox.gallery-btn_type_next {
+  .gallery__btn_type_lightbox.gallery__btn_type_next {
     transform: translate(-50%, -50%); }
   .gallery__btn_type_prev {
     left: 0;
