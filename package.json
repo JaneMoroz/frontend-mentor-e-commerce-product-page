@@ -18,7 +18,7 @@
     "build:css": "node-sass src/styles -o src/assets/css ",
     "watch:css": "npm run build:css && node-sass src/styles -o src/assets/css -w -r",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@types/node-sass": "^4.11.3",
+    "netlify-cli": "^12.0.11",
     "node-sass": "^7.0.3",
     "npm-run-all": "^4.1.5"
   }
