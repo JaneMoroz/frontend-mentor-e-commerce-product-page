@@ -1,11 +1,18 @@
 import React from "react";
+import { observer } from "mobx-react";
 import Gallery from "./Gallery";
+import { useStore } from "../context/context";
 
-const Lightbox = () => {
+const Lightbox: React.FC = observer(() => {
+  const store = useStore();
   return (
-    <div className="lightbox">
+    <div className={`lightbox ${store.lightboxIsOpen && "open"}`}>
       <div className="lightbox__inner">
-        <button type="button" className="lightbox__close-btn">
+        <button
+          onClick={() => store.toggleLightbox()}
+          type="button"
+          className="lightbox__close-btn"
+        >
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
@@ -18,6 +25,6 @@ const Lightbox = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Lightbox;

@@ -23,12 +23,30 @@
   }
 
   &__image_size_sm {
-    padding: 1.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.4rem auto;
+    border: 3px solid var(--transparent);
+    border-radius: 1.6rem;
+    background: var(--white);
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-radius: 1.6rem;
+      border-radius: 1.3rem;
+      transition: all 0.3s;
+    }
+
+    &:hover img {
+      filter: opacity(50%);
+    }
+  }
+
+  &__image_size_sm.active {
+    border: 3px solid var(--orange);
+    img {
+      filter: opacity(50%);
     }
   }
 

@@ -7,12 +7,14 @@ import { IProduct } from "../interfaces/IProduct";
 type ContextType = {
   menuIsOpen: boolean;
   cartIsOpen: boolean;
+  lightboxIsOpen: boolean;
   single_product: IProduct;
   cartItems: ICartItem[];
   addToCart: (item: ICartItem) => void;
   removeFromCart: (id: string) => void;
   toggleMenu: () => void;
   toggleCart: () => void;
+  toggleLightbox: () => void;
 };
 
 const Context = React.createContext({} as ContextType);

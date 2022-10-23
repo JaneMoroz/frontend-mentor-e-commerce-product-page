@@ -189,6 +189,9 @@ button {
   .lightbox__close-btn {
     align-self: flex-end; }
 
+.lightbox.open {
+  display: flex; }
+
 .navbar {
   position: relative;
   column-gap: 5.6rem;
@@ -271,12 +274,26 @@ button {
         height: 45rem; } }
 
 .gallery__image_size_sm {
-  padding: 1.4rem 0; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4rem auto;
+  border: 3px solid var(--transparent);
+  border-radius: 1.6rem;
+  background: var(--white); }
   .gallery__image_size_sm img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 1.6rem; }
+    border-radius: 1.3rem;
+    transition: all 0.3s; }
+  .gallery__image_size_sm:hover img {
+    filter: opacity(50%); }
+
+.gallery__image_size_sm.active {
+  border: 3px solid var(--orange); }
+  .gallery__image_size_sm.active img {
+    filter: opacity(50%); }
 
 .gallery__thumbnail {
   column-gap: 1.6rem; }

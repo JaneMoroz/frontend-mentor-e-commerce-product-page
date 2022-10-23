@@ -4,6 +4,7 @@ export function createStore() {
   return {
     menuIsOpen: false,
     cartIsOpen: false,
+    lightboxIsOpen: false,
     single_product: {
       id: "1",
       title: "Fall Limited Edition Sneakers",
@@ -46,6 +47,9 @@ export function createStore() {
     },
     toggleCart() {
       this.cartIsOpen = !this.cartIsOpen;
+    },
+    toggleLightbox() {
+      this.lightboxIsOpen = !this.lightboxIsOpen;
     },
   };
 }

@@ -1,6 +1,5 @@
 .lightbox {
   position: absolute;
-  // display: flex;
   display: none;
   justify-content: center;
   align-items: center;
@@ -19,4 +18,8 @@
   &__close-btn {
     align-self: flex-end;
   }
+}
+
+.lightbox.open {
+  display: flex;
 }
