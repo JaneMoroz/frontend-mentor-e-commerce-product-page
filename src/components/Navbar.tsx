@@ -48,6 +48,14 @@ const Navbar: React.FC = observer(() => {
             aria-label="cart"
           >
             <CartIcon />
+            {store.cartItems.length !== 0 && (
+              <span>
+                {store.cartItems.reduce(
+                  (acc, cartItem) => acc + cartItem.quantity,
+                  0
+                )}
+              </span>
+            )}
           </button>
           <a href="#" className="btn btn_type_img" aria-label="user account">
             <img src={userImage} alt="user" />

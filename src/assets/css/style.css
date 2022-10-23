@@ -88,10 +88,25 @@ button {
     object-fit: cover; }
 
 .btn_type_icon {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem; }
+  .btn_type_icon span {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    display: inline-block;
+    min-width: 1.6rem;
+    padding: 0.1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: var(--orange);
+    color: var(--white); }
+  .btn_type_icon:hover span {
+    filter: brightness(120%); }
   .btn_type_icon:hover svg path {
     filter: brightness(120%); }
 
