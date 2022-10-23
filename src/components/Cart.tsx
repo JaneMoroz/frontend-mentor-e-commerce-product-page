@@ -2,6 +2,7 @@ import React from "react";
 import { observer } from "mobx-react";
 import { Delete } from "../assets/icons";
 import { useStore } from "../context/context";
+import { formatCurrency } from "../utilities/formatCurrency";
 
 const Cart: React.FC = observer(() => {
   const store = useStore();
@@ -23,9 +24,12 @@ const Cart: React.FC = observer(() => {
                   <div>
                     <p>{cartItem.product.title}</p>
                     <p>
-                      ${cartItem.product.final_price} x {cartItem.quantity}
+                      {formatCurrency(cartItem.product.final_price)} x{" "}
+                      {cartItem.quantity}
                       <span>
-                        ${cartItem.product.final_price * cartItem.quantity}
+                        {formatCurrency(
+                          cartItem.product.final_price * cartItem.quantity
+                        )}
                       </span>
                     </p>
                   </div>
