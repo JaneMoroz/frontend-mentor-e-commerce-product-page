@@ -191,6 +191,9 @@ button {
 
 .lightbox.open {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .lightbox.open {
+      display: none; } }
 
 .navbar {
   position: relative;
@@ -271,7 +274,7 @@ button {
         border-radius: 0; } }
     @media only screen and (max-width: 37.5em) {
       .gallery__image_size_bg img {
-        height: 45rem; } }
+        height: 35rem; } }
 
 .gallery__image_size_sm {
   display: flex;

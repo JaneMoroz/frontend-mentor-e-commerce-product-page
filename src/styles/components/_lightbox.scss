@@ -8,6 +8,7 @@
   height: 100%;
   width: 100%;
   background: var(--lightbox-background);
+
   &__inner {
     z-index: 999;
     max-width: 40rem;
@@ -22,4 +23,8 @@
 
 .lightbox.open {
   display: flex;
+
+  @media only screen and (max-width: 56.25em) {
+    display: none;
+  }
 }
