@@ -51,6 +51,7 @@ const ProductDescription = () => {
             onClick={() => handleQuantity("dec")}
             type="button"
             className="btn btn_type_icon"
+            aria-label="decrease quantity"
           >
             <Minus />
           </button>
@@ -59,6 +60,7 @@ const ProductDescription = () => {
             onClick={() => handleQuantity("inc")}
             type="button"
             className="btn btn_type_icon"
+            aria-label="increase quantity"
           >
             <Plus />
           </button>

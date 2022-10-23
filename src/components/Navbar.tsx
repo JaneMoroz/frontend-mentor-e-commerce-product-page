@@ -1,9 +1,8 @@
 import React from "react";
 import { observer } from "mobx-react";
 import userImage from "../assets/images/image-avatar.png";
-import logo from "../assets/logo.svg";
 import Cart from "./Cart";
-import { Menu, Cart as CartIcon, Close } from "../assets/icons";
+import { Menu, Cart as CartIcon, Close, Logo } from "../assets/icons";
 import { useStore } from "../context/context";
 
 const links = ["collections", "men", "women", "about", "contact"];
@@ -18,11 +17,12 @@ const Navbar: React.FC = observer(() => {
             onClick={() => store.toggleMenu()}
             type="button"
             className="navbar__menu_btn btn btn_type_icon"
+            aria-label="menu"
           >
             <Menu />
           </button>
-          <a href="#">
-            <img src={logo} alt="logo" />
+          <a href="#" aria-label="Sneakers">
+            <Logo />
           </a>
         </div>
         <div className={`navbar__links ${store.menuIsOpen && "open"}`}>
@@ -30,6 +30,7 @@ const Navbar: React.FC = observer(() => {
             onClick={() => store.toggleMenu()}
             type="button"
             className="btn btn_type_icon"
+            aria-label="close menu"
           >
             <Close />
           </button>
@@ -44,10 +45,11 @@ const Navbar: React.FC = observer(() => {
             onClick={() => store.toggleCart()}
             type="button"
             className="btn btn_type_icon"
+            aria-label="cart"
           >
             <CartIcon />
           </button>
-          <a href="#" className="btn btn_type_img">
+          <a href="#" className="btn btn_type_img" aria-label="user account">
             <img src={userImage} alt="user" />
           </a>
         </div>

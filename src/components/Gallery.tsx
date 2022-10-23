@@ -35,6 +35,7 @@ const Gallery = ({ lightbox }: GalleryProps) => {
           className={`gallery__btn gallery__btn_type_prev ${
             lightbox && "gallery__btn_type_lightbox"
           }`}
+          aria-label="previous"
         >
           <Previous />
         </button>
@@ -44,10 +45,15 @@ const Gallery = ({ lightbox }: GalleryProps) => {
           className={`gallery__btn gallery__btn_type_next ${
             lightbox && "gallery__btn_type_lightbox"
           }`}
+          aria-label="next"
         >
           <Next />
         </button>
-        <button type="button" onClick={handleLightbox}>
+        <button
+          type="button"
+          onClick={handleLightbox}
+          aria-label="open lightbox"
+        >
           <img
             onClick={handleLightbox}
             src={store.single_product.images[imageIndex]}
@@ -64,6 +70,7 @@ const Gallery = ({ lightbox }: GalleryProps) => {
             className={`gallery__image_size_sm ${
               index === imageIndex && "active"
             }`}
+            aria-label={store.single_product.title}
           >
             <img src={image} alt={store.single_product.title} />
           </button>

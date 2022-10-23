@@ -37,6 +37,7 @@ const Cart: React.FC = observer(() => {
                     onClick={() => store.removeFromCart(cartItem.product.id)}
                     type="button"
                     className="cart-item__delete-btn"
+                    aria-label="delete"
                   >
                     <Delete />
                   </button>
