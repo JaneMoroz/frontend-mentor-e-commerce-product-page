@@ -55,6 +55,14 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+
+    &:hover {
+      svg {
+        path {
+          filter: brightness(120%);
+        }
+      }
+    }
   }
 
   &_type_primary {
@@ -69,6 +77,13 @@
     color: var(--white);
     font-size: 1.6rem;
     font-weight: 700;
+    box-shadow: 2px 6px 10px rgba(255, 125, 26, 0.3);
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 2px 14px 16px rgba(255, 125, 26, 0.3);
+      filter: brightness(120%);
+    }
 
     svg {
       path {

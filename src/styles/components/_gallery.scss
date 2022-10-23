@@ -67,6 +67,16 @@
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
+
+    &:hover {
+      svg {
+        path {
+          stroke: var(--orange);
+          transition: all 0.3s;
+        }
+      }
+    }
 
     &_type_lightbox {
       display: flex;

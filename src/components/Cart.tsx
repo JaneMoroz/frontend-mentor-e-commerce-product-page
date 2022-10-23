@@ -36,7 +36,7 @@ const Cart: React.FC = observer(() => {
                   <button
                     onClick={() => store.removeFromCart(cartItem.product.id)}
                     type="button"
-                    className="btn btn_type_icon"
+                    className="cart-item__delete-btn"
                   >
                     <Delete />
                   </button>

@@ -11,7 +11,7 @@ const Lightbox: React.FC = observer(() => {
         <button
           onClick={() => store.toggleLightbox()}
           type="button"
-          className="lightbox__close-btn"
+          className="btn btn_type_icon lightbox__close-btn"
         >
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
             <path

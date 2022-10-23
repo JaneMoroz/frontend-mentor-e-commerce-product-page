@@ -73,6 +73,19 @@
       }
     }
   }
+
+  &__delete-btn {
+    padding: 0.6rem;
+    transition: all 0.3s;
+
+    &:hover {
+      svg {
+        use {
+          fill: var(--blue-grayish-dark);
+        }
+      }
+    }
+  }
 }
 
 .cart.visible {

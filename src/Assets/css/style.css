@@ -92,6 +92,8 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1rem; }
+  .btn_type_icon:hover svg path {
+    filter: brightness(120%); }
 
 .btn_type_primary {
   width: 100%;
@@ -104,7 +106,12 @@ button {
   border-radius: 1rem;
   color: var(--white);
   font-size: 1.6rem;
-  font-weight: 700; }
+  font-weight: 700;
+  box-shadow: 2px 6px 10px rgba(255, 125, 26, 0.3);
+  transition: all 0.3s; }
+  .btn_type_primary:hover {
+    box-shadow: 2px 14px 16px rgba(255, 125, 26, 0.3);
+    filter: brightness(120%); }
   .btn_type_primary svg path {
     fill: var(--white); }
 
@@ -166,6 +173,11 @@ button {
       .cart-item__details p span {
         color: var(--black);
         font-weight: 700; }
+  .cart-item__delete-btn {
+    padding: 0.6rem;
+    transition: all 0.3s; }
+    .cart-item__delete-btn:hover svg use {
+      fill: var(--blue-grayish-dark); }
 
 .cart.visible {
   display: block; }
@@ -215,7 +227,7 @@ button {
     flex-grow: 1;
     display: flex;
     column-gap: 2.4rem; }
-    .navbar__links .btn_type_icon-big {
+    .navbar__links .btn_type_icon {
       display: none; }
     @media only screen and (max-width: 56.25em) {
       .navbar__links {
@@ -239,7 +251,7 @@ button {
   width: 24rem;
   padding: 3.2rem 2.4rem;
   z-index: 999; }
-  .open.navbar__links .btn_type_icon-big {
+  .open.navbar__links .btn_type_icon {
     display: inline-block;
     margin-bottom: 3.6rem; }
   .open.navbar__links a {
@@ -247,6 +259,8 @@ button {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.15rem; }
+    .open.navbar__links a:hover {
+      color: var(--blue-grayish-dark); }
 
 .open.overlay {
   position: fixed;
@@ -313,7 +327,11 @@ button {
   background: var(--white);
   height: 5rem;
   width: 5rem;
-  border-radius: 50%; }
+  border-radius: 50%;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125); }
+  .gallery__btn:hover svg path {
+    stroke: var(--orange);
+    transition: all 0.3s; }
   .gallery__btn_type_lightbox {
     display: flex; }
   .gallery__btn_type_lightbox.gallery-btn_type_prev {

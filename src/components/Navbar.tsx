@@ -17,7 +17,7 @@ const Navbar: React.FC = observer(() => {
           <button
             onClick={() => store.toggleMenu()}
             type="button"
-            className="navbar__menu_btn btn btn_type_icon-big"
+            className="navbar__menu_btn btn btn_type_icon"
           >
             <Menu />
           </button>
@@ -29,7 +29,7 @@ const Navbar: React.FC = observer(() => {
           <button
             onClick={() => store.toggleMenu()}
             type="button"
-            className="btn btn_type_icon-big"
+            className="btn btn_type_icon"
           >
             <Close />
           </button>
@@ -43,7 +43,7 @@ const Navbar: React.FC = observer(() => {
           <button
             onClick={() => store.toggleCart()}
             type="button"
-            className="btn btn_type_icon-big"
+            className="btn btn_type_icon"
           >
             <CartIcon />
           </button>
