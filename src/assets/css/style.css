@@ -86,15 +86,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.6rem;
-  width: 3.6rem;
+  height: 4.1rem;
+  width: 4.1rem;
   border-radius: 50%;
   transition: all 0.3s; }
   .btn_type_img:hover {
     box-shadow: inset 0 0 0 3px var(--orange); }
   .btn_type_img img {
-    height: 4rem;
-    width: 4rem;
+    height: 3.8rem;
+    width: 3.8rem;
     object-fit: cover; }
 
 .btn_type_icon {
@@ -126,7 +126,7 @@ p {
   align-items: center;
   justify-content: center;
   column-gap: 1.4rem;
-  padding: 1.65rem;
+  padding: 1.8rem;
   background: var(--orange);
   border-radius: 1rem;
   color: var(--white);
@@ -258,7 +258,7 @@ p {
       .navbar__links {
         display: none; } }
   .navbar__user {
-    column-gap: 5.6rem; }
+    column-gap: 4rem; }
     @media only screen and (max-width: 56.25em) {
       .navbar__user {
         column-gap: 3.6rem; } }
