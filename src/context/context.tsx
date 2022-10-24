@@ -1,27 +1,32 @@
 import React from "react";
-import { useLocalObservable } from "mobx-react";
-import { createStore } from "../store/store";
+import initStores from "../store/initStores";
 import { ICartItem } from "../interfaces/ICartItem";
 import { IProduct } from "../interfaces/IProduct";
 
 type ContextType = {
-  menuIsOpen: boolean;
-  cartIsOpen: boolean;
-  lightboxIsOpen: boolean;
-  single_product: IProduct;
-  cartItems: ICartItem[];
-  addToCart: (item: ICartItem) => void;
-  removeFromCart: (id: string) => void;
-  toggleMenu: () => void;
-  toggleCart: () => void;
-  toggleLightbox: () => void;
+  cartStore: {
+    cartItems: ICartItem[];
+    addToCart: (item: ICartItem) => void;
+    removeFromCart: (id: string) => void;
+  };
+  navStore: {
+    menuIsOpen: boolean;
+    cartIsOpen: boolean;
+    toggleMenu: () => void;
+    toggleCart: () => void;
+  };
+  singleProductStore: {
+    product: IProduct;
+    lightboxIsOpen: boolean;
+    toggleLightbox: () => void;
+  };
 };
 
 const Context = React.createContext({} as ContextType);
 
 export const Provider = ({ children }: { children: React.ReactNode }) => {
-  const store = useLocalObservable(createStore);
-  return <Context.Provider value={store}>{children}</Context.Provider>;
+  const stores = initStores();
+  return <Context.Provider value={stores}>{children}</Context.Provider>;
 };
 
 export const useStore = () => React.useContext(Context);

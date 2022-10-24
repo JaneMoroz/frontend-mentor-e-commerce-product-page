@@ -8,18 +8,18 @@ type GalleryProps = {
 
 const Gallery = ({ lightbox }: GalleryProps) => {
   const [imageIndex, setImageIndex] = useState(0);
-  const store = useStore();
+  const { singleProductStore } = useStore();
 
   const handleLightbox = () => {
-    if (!store.lightboxIsOpen) {
-      store.toggleLightbox();
+    if (!singleProductStore.lightboxIsOpen) {
+      singleProductStore.toggleLightbox();
     }
   };
 
   const handleImageChange = (index: number) => {
     if (index < 0) {
-      setImageIndex(store.single_product.images.length - 1);
-    } else if (index > store.single_product.images.length - 1) {
+      setImageIndex(singleProductStore.product.images.length - 1);
+    } else if (index > singleProductStore.product.images.length - 1) {
       setImageIndex(0);
     } else {
       setImageIndex(index);
@@ -57,19 +57,19 @@ const Gallery = ({ lightbox }: GalleryProps) => {
           aria-label="open lightbox"
         >
           <img
-            src={store.single_product.images[imageIndex]}
-            alt={store.single_product.title}
+            src={singleProductStore.product.images[imageIndex]}
+            alt={singleProductStore.product.title}
           />
         </button>
         {/* Small screen */}
         <img
           className="gallery__main-image_screen_sm"
-          src={store.single_product.images[imageIndex]}
-          alt={store.single_product.title}
+          src={singleProductStore.product.images[imageIndex]}
+          alt={singleProductStore.product.title}
         />
       </div>
       <div className="gallery__thumbnail flex">
-        {store.single_product.images.map((image, index) => (
+        {singleProductStore.product.images.map((image, index) => (
           <button
             onClick={() => handleImageChange(index)}
             key={index}
@@ -77,9 +77,9 @@ const Gallery = ({ lightbox }: GalleryProps) => {
             className={`gallery__image_size_sm ${
               index === imageIndex && "active"
             }`}
-            aria-label={store.single_product.title}
+            aria-label={singleProductStore.product.title}
           >
-            <img src={image} alt={store.single_product.title} />
+            <img src={image} alt={singleProductStore.product.title} />
           </button>
         ))}
       </div>

@@ -8,13 +8,13 @@ import { useStore } from "../context/context";
 const links = ["collections", "men", "women", "about", "contact"];
 
 const Navbar: React.FC = observer(() => {
-  const store = useStore();
+  const { navStore, cartStore } = useStore();
   return (
     <div className="container">
       <nav className="navbar flex flex_justify_space-between">
         <div className="navbar__menu flex">
           <button
-            onClick={() => store.toggleMenu()}
+            onClick={() => navStore.toggleMenu()}
             type="button"
             className="navbar__menu_btn btn btn_type_icon"
             aria-label="menu"
@@ -25,9 +25,9 @@ const Navbar: React.FC = observer(() => {
             <Logo />
           </a>
         </div>
-        <div className={`navbar__links ${store.menuIsOpen && "open"}`}>
+        <div className={`navbar__links ${navStore.menuIsOpen && "open"}`}>
           <button
-            onClick={() => store.toggleMenu()}
+            onClick={() => navStore.toggleMenu()}
             type="button"
             className="btn btn_type_icon"
             aria-label="close menu"
@@ -42,15 +42,15 @@ const Navbar: React.FC = observer(() => {
         </div>
         <div className="navbar__user flex">
           <button
-            onClick={() => store.toggleCart()}
+            onClick={() => navStore.toggleCart()}
             type="button"
             className="btn btn_type_icon"
             aria-label="cart"
           >
             <CartIcon />
-            {store.cartItems.length !== 0 && (
+            {cartStore.cartItems.length !== 0 && (
               <span>
-                {store.cartItems.reduce(
+                {cartStore.cartItems.reduce(
                   (acc, cartItem) => acc + cartItem.quantity,
                   0
                 )}
@@ -63,7 +63,7 @@ const Navbar: React.FC = observer(() => {
         </div>
         <Cart />
       </nav>
-      <div className={`overlay ${store.menuIsOpen && "open"}`}></div>
+      <div className={`overlay ${navStore.menuIsOpen && "open"}`}></div>
     </div>
   );
 });

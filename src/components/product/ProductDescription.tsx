@@ -5,14 +5,14 @@ import { formatCurrency } from "../../utilities/formatCurrency";
 
 const ProductDescription = () => {
   const [quantity, setQuantity] = useState(1);
-  const store = useStore();
+  const { singleProductStore, cartStore } = useStore();
 
   const handleAddToCart = () => {
     const newCartItem = {
-      product: { ...store.single_product },
+      product: { ...singleProductStore.product },
       quantity: quantity,
     };
-    store.addToCart(newCartItem);
+    cartStore.addToCart(newCartItem);
     setQuantity(1);
   };
 
@@ -32,18 +32,18 @@ const ProductDescription = () => {
   return (
     <div className="product__description">
       <span className="product__company-tag">
-        {store.single_product.company}
+        {singleProductStore.product.company}
       </span>
-      <h1>{store.single_product.title}</h1>
-      <p>{store.single_product.description}</p>
+      <h1>{singleProductStore.product.title}</h1>
+      <p>{singleProductStore.product.description}</p>
       <div className="product__price">
         <p>
-          {formatCurrency(store.single_product.final_price)}{" "}
+          {formatCurrency(singleProductStore.product.final_price)}{" "}
           <span className="product__price-tag">
-            {store.single_product.discount}%
+            {singleProductStore.product.discount}%
           </span>
         </p>
-        <p>{formatCurrency(store.single_product.price)}</p>
+        <p>{formatCurrency(singleProductStore.product.price)}</p>
       </div>
       <div className="product__cta flex">
         <div className="product__quantity flex">

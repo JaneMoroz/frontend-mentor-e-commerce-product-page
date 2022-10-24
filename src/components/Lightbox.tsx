@@ -5,13 +5,16 @@ import { useStore } from "../context/context";
 import { Close } from "../assets/icons";
 
 const Lightbox: React.FC = observer(() => {
-  const store = useStore();
+  const { singleProductStore } = useStore();
+
   return (
     <>
-      <div className={`lightbox ${store.lightboxIsOpen && "open"}`}>
+      <div
+        className={`lightbox ${singleProductStore.lightboxIsOpen && "open"}`}
+      >
         <div className="lightbox__inner">
           <button
-            onClick={() => store.toggleLightbox()}
+            onClick={() => singleProductStore.toggleLightbox()}
             type="button"
             className="btn btn_type_icon lightbox__close-btn"
             aria-label="close"
@@ -21,7 +24,9 @@ const Lightbox: React.FC = observer(() => {
           <Gallery lightbox={true} />
         </div>
       </div>
-      <div className={`overlay ${store.lightboxIsOpen && "open"}`}></div>
+      <div
+        className={`overlay ${singleProductStore.lightboxIsOpen && "open"}`}
+      ></div>
     </>
   );
 });

@@ -5,19 +5,19 @@ import { useStore } from "../context/context";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 const Cart: React.FC = observer(() => {
-  const store = useStore();
+  const { cartStore, navStore } = useStore();
   return (
-    <div className={`cart ${store.cartIsOpen && "visible"}`}>
+    <div className={`cart ${navStore.cartIsOpen && "visible"}`}>
       <p className="cart__title">cart</p>
-      {store.cartItems.length === 0 && (
+      {cartStore.cartItems.length === 0 && (
         <div className="cart__empty">
           <p>Your cart is empty.</p>
         </div>
       )}
-      {store.cartItems.length !== 0 && (
+      {cartStore.cartItems.length !== 0 && (
         <>
           <ul>
-            {store.cartItems.map((cartItem) => (
+            {cartStore.cartItems.map((cartItem) => (
               <li key={cartItem.product.id} className="cart-item">
                 <img src={cartItem.product.images[0]} alt="product-1" />
                 <div className="cart-item__details">
@@ -34,7 +34,9 @@ const Cart: React.FC = observer(() => {
                     </p>
                   </div>
                   <button
-                    onClick={() => store.removeFromCart(cartItem.product.id)}
+                    onClick={() =>
+                      cartStore.removeFromCart(cartItem.product.id)
+                    }
                     type="button"
                     className="cart-item__delete-btn"
                     aria-label="delete"
