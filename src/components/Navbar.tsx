@@ -1,9 +1,9 @@
 import React from "react";
 import { observer } from "mobx-react";
-import userImage from "../assets/images/image-avatar.png";
-import Cart from "./Cart";
 import { Menu, Cart as CartIcon, Close, Logo } from "../assets/icons";
 import { useStore } from "../context/context";
+import userImage from "../assets/images/image-avatar.png";
+import Cart from "./Cart";
 
 const links = ["collections", "men", "women", "about", "contact"];
 

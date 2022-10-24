@@ -1,13 +1,14 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { observer } from "mobx-react";
-import Gallery from "./Gallery";
 import { useStore } from "../context/context";
 import { Close } from "../assets/icons";
+import Gallery from "./Gallery";
 
 const Lightbox: React.FC = observer(() => {
   const { singleProductStore } = useStore();
 
-  return (
+  return ReactDOM.createPortal(
     <>
       <div
         className={`lightbox ${singleProductStore.lightboxIsOpen && "open"}`}
@@ -24,10 +25,8 @@ const Lightbox: React.FC = observer(() => {
           <Gallery lightbox={true} />
         </div>
       </div>
-      <div
-        className={`overlay ${singleProductStore.lightboxIsOpen && "open"}`}
-      ></div>
-    </>
+    </>,
+    document.getElementById("portal") as HTMLElement
   );
 });
 

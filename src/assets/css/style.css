@@ -149,7 +149,7 @@ p {
   background: var(--white);
   border-radius: 10px;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10; }
+  z-index: 1; }
   @media only screen and (max-width: 37.5em) {
     .cart {
       top: 110%;
@@ -216,7 +216,8 @@ p {
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 999; }
+  background: var(--lightbox-background);
+  z-index: 2; }
   .lightbox__inner {
     position: fixed;
     max-width: 40rem;
@@ -275,7 +276,7 @@ p {
   height: 100vh;
   width: 24rem;
   padding: 3.2rem 2.4rem;
-  z-index: 999; }
+  z-index: 4; }
   .open.navbar__links .btn_type_icon {
     display: inline-block;
     margin-bottom: 3.6rem; }
@@ -294,7 +295,7 @@ p {
   width: 100vw;
   height: 100vh;
   background: var(--lightbox-background);
-  z-index: 99; }
+  z-index: 3; }
 
 .gallery__image_size_bg {
   position: relative; }
