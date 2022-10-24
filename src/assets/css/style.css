@@ -208,7 +208,7 @@ p {
   display: block; }
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   display: none;
   justify-content: center;
   align-items: center;
@@ -219,7 +219,7 @@ p {
   background: var(--lightbox-background);
   z-index: 2; }
   .lightbox__inner {
-    position: fixed;
+    position: absolute;
     max-width: 40rem;
     display: flex;
     flex-direction: column;
